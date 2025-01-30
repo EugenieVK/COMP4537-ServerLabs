@@ -32,7 +32,7 @@ http.createServer((req, res) => {
             res.write(editor.readFromFile(file));
             break;
         default:
-            const page404 = `<p style="color:red">${messages.strings.page404}</p>`;
+            const page404 = `<h2 style="color:red">${messages.strings.page404}</h2>`;
             res.write(page404);
     }
     res.end();

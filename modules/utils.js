@@ -12,7 +12,7 @@ class Greeter {
 
     getGreeting() {
         const fullMessage = messages.strings.msg.replace("%1", this.name);
-        const html = `<p style="color:blue">${fullMessage} ${this.#getDate()}</p>`;
+        const html = `<h3 style="color:blue">${fullMessage} ${this.#getDate()}</h3>`;
         return html
     }
 }
@@ -26,7 +26,7 @@ class FileEditor {
             fs.appendFileSync(this.file, text);
             return `<p>${messages.strings.successWritingFile}</p>`;
         } catch(err) {
-            return `<p>${messages.strings.errWritingFile}</p>`;
+            return `<h2>${messages.strings.errWritingFile}</h2>`;
         }
     }
 
@@ -36,11 +36,11 @@ class FileEditor {
                 const data = fs.readFileSync(fileName);
                 return `<p>${data}</p>`;
             } catch(err) {
-                return `<p>${messages.strings.errFile404.replace("%1", fileName)}</p>`;
+                return `<h2>${messages.strings.errFile404.replace("%1", fileName)}</h2>`;
             }
         }
         
-        return `<p>${messages.strings.errNoFileGiven}</p>`
+        return `<h2>${messages.strings.errNoFileGiven}</h2>`
     }
 }
 
