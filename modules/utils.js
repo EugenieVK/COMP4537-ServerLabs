@@ -23,7 +23,7 @@ class FileEditor {
 
     writeToFile(text){
         try {
-            fs.appendFileSync(this.file, text);
+            fs.appendFileSync(this.file, text + '\n');
             return `<p>${messages.strings.successWritingFile}</p>`;
         } catch(err) {
             return `<h2>${messages.strings.errWritingFile}</h2>`;
