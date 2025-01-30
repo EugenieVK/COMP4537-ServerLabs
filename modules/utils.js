@@ -12,7 +12,7 @@ class Greeter {
 
     getGreeting() {
         const fullMessage = messages.strings.msg.replace("%1", this.name);
-        const html = `<p color="blue">${fullMessage} ${this.#getDate()}</p>`;
+        const html = `<p style="color:blue">${fullMessage} ${this.#getDate()}</p>`;
         return html
     }
 }

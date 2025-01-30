@@ -4,8 +4,6 @@ const {Greeter, FileEditor} = require("./modules/utils");
 const http = require("http");
 const url = require("url");
 
-const fs = require("fs");
-
 const fileName = "file.txt";
 
 
@@ -34,7 +32,7 @@ http.createServer((req, res) => {
             res.write(editor.readFromFile(file));
             break;
         default:
-            const page404 = `<p color="red">${messages.strings.page404}</p>`;
+            const page404 = `<p style="color:red">${messages.strings.page404}</p>`;
             res.write(page404);
     }
     res.end();
