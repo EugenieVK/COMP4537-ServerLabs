@@ -34,7 +34,7 @@ http.createServer((req, res) => {
                 res.write(editor.writeToFile(text));
                 break;
             case lab3Pages.readPage:
-                const file = urlParams[2];
+                const file = urlParams[3];
                 res.write(editor.readFromFile(file));
                 break;
             default:
