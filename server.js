@@ -23,7 +23,7 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     if(urlParams[1] == lab3Pages.param){
         const editor = new FileEditor(fileName);
-        switch (urlParams[1]) {
+        switch (urlParams[2]) {
             case lab3Pages.datePage:
                 const name = url.parse(req.url, true).query.name;
                 const greeter = new Greeter(name);
