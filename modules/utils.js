@@ -7,7 +7,7 @@ class Greeter {
     }
 
     #getDate() {
-        return new Date()
+        return new Date().toString();
     }
 
     getGreeting() {
